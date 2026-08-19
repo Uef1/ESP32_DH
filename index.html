@@ -1,2 +1,18 @@
-<script type="module" src="https://unpkg.com"></script>
-<esp-web-install-button manifest="manifest.json"></esp-web-install-button>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>ESP32-C3 Прошивальщик</title>
+    <!-- Подключаем сам скрипт кнопки -->
+    <script type="module" src="https://unpkg.com"></script>
+</head>
+<body style="font-family: sans-serif; text-align: center; padding-top: 50px;">
+
+    <h1>Установка прошивки ESP32-C3</h1>
+    <p>Подключите плату по USB и нажмите кнопку ниже:</p>
+
+    <!-- Сама кнопка, которая ссылается на файл манифеста -->
+    <esp-web-install-button manifest="manifest.json"></esp-web-install-button>
+
+</body>
+</html>
