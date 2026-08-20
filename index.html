@@ -2,23 +2,42 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>ESP32-C3 Прошивальщик</title>
-    <!-- Отключаем поиск иконки вкладки, убираем ошибку 404 -->
-    <link rel="icon" href="data:,">
-    
-    <!-- Подключаем скрипт в виде готового модуля с правильного адреса -->
-    <script type="module" src="https://github.io"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Прошивка ESP32 онлайн</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            text-align: center;
+            padding: 50px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            display: inline-block;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        esp-web-install-button {
+            margin-top: 20px;
+        }
+    </style>
+    <!-- Подключение скрипта ESP Web Tools -->
+    <script type="module" src="https://unpkg.com"></script>
 </head>
-<body style="font-family: sans-serif; text-align: center; padding-top: 50px; background-color: #f4f4f9;">
+<body>
 
-    <h1>Установка прошивки ESP32-C3</h1>
-    <p>Подключите вашу плату к компьютеру по USB-кабелю и нажмите кнопку ниже:</p>
-
-    <!-- Сама кнопка, которая ищет манифест в этой же папке репозитория -->
-    <esp-web-install-button manifest="manifest.json"></esp-web-install-button>
+    <div class="container">
+        <h1>Прошивка моего устройства</h1>
+        <p>Подключите ESP32 к USB-порту компьютера и нажмите кнопку ниже.</p>
+        
+        <!-- Кнопка прошивки, привязанная к вашему манифесту -->
+        <esp-web-install-button manifest="manifest.json"></esp-web-install-button>
+    </div>
 
 </body>
 </html>
+
 
 
 
