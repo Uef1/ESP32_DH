@@ -22,10 +22,8 @@
             margin-top: 20px;
         }
     </style>
-    <!-- Подключение скрипта ESP Web Tools -->
-    
-   <script type="module" src="install-button.js"></script>
-
+    <!-- ПРАВИЛЬНОЕ ПОДКЛЮЧЕНИЕ CDN -->
+    <script type="module" src="https://jsdelivr.net"></script>
 </head>
 <body>
 
@@ -33,12 +31,13 @@
         <h1>Прошивка моего устройства</h1>
         <p>Подключите ESP32 к USB-порту компьютера и нажмите кнопку ниже.</p>
         
-        <!-- Кнопка прошивки, привязанная к вашему манифесту -->
+        <!-- Сама кнопка прошивки -->
         <esp-web-install-button manifest="manifest.json"></esp-web-install-button>
     </div>
 
 </body>
 </html>
+
 
 
 
