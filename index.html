@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Прошивка ESP32 онлайн</title>
+    <title>Онлайн Прошивка ESP32</title>
     <style>
         body {
             font-family: sans-serif;
@@ -18,12 +18,13 @@
             display: inline-block;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
-        esp-web-install-button {
+        iframe {
+            border: none;
+            width: 200px;
+            height: 60px;
             margin-top: 20px;
         }
     </style>
-    <!-- ЗАГРУЗКА ТОЛЬКО ИЗ ВАШЕГО РЕПОЗИТОРИЯ -->
-    <script type="module" src="esp-web-tools.js"></script>
 </head>
 <body>
 
@@ -31,15 +32,9 @@
         <h1>Прошивка моего устройства</h1>
         <p>Подключите ESP32 к USB-порту компьютера и нажмите кнопку ниже.</p>
         
-        <!-- Сама кнопка прошивки -->
-        <esp-web-install-button manifest="manifest.json"></esp-web-install-button>
+        <!-- Официальный бесскриптовый виджет-кнопка (замените uef1 на ваше имя, если репозиторий называется иначе) -->
+        <iframe src="https://github.io"></iframe>
     </div>
 
 </body>
 </html>
-
-
-
-
-
-
