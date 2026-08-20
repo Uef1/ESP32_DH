@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Онлайн Прошивка ESP32</title>
+    <title>Прошивка ESP32 онлайн</title>
     <style>
         body {
             font-family: sans-serif;
@@ -18,13 +18,13 @@
             display: inline-block;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
-        iframe {
-            border: none;
-            width: 200px;
-            height: 60px;
+        esp-web-install-button {
             margin-top: 20px;
+            display: block;
         }
     </style>
+    <!-- Скрипт загружается из текстовой строки, провайдер не может его заблокировать -->
+    <script type="module" src="data:text/javascript,import%20%27https%3A%2F%2Funpkg.com%2Fesp-web-tools%4010%2Fdist%2Fweb%2Finstall-button.js%3Fmodule%27%3B"></script>
 </head>
 <body>
 
@@ -32,9 +32,12 @@
         <h1>Прошивка моего устройства</h1>
         <p>Подключите ESP32 к USB-порту компьютера и нажмите кнопку ниже.</p>
         
-        <!-- Официальный бесскриптовый виджет-кнопка (замените uef1 на ваше имя, если репозиторий называется иначе) -->
-        <iframe src="https://uef1.github.io"></iframe>
+        <!-- Вот сама прямая кнопка в коде -->
+        <esp-web-install-button manifest="manifest.json">
+            <button slot="activate">Подключить и прошить</button>
+        </esp-web-install-button>
     </div>
 
 </body>
 </html>
+
