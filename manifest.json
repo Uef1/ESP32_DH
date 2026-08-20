@@ -1,13 +1,13 @@
 {
-  "name": "My ESP32-C3 Firmware",
+  "name": "Моя Прошивка ESP32",
   "version": "1.0.0",
+  "home_ui_button": true,
   "builds": [
     {
-      "chipFamily": "ESP32-C3",
+      "chipFamily": "ESP32",
       "parts": [
         { "path": "firmware.bin", "offset": 0 }
       ]
     }
   ]
 }
-
